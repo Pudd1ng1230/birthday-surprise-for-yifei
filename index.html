@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日解谜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 主应用容器：模拟手机屏幕 -->
+    <div class="app-container">
+        
+        <!-- 图标网格区域 -->
+        <div class="icon-grid">
+            <!-- 吉伊图标 -->
+            <div class="puzzle-icon-wrapper" id="jiyi-icon-wrapper">
+                <img id="jiyi-icon" src="jiyi.png" alt="吉伊图标" class="puzzle-icon">
+            </div>
+            
+            <!-- 可颂图标 -->
+            <div class="puzzle-icon-wrapper" id="kesong-icon-wrapper">
+                <img id="kesong-icon" src="kesong.png" alt="可颂图标" class="puzzle-icon">
+            </div>
+            
+            <!-- 问号图标 (SVG) -->
+            <div class="puzzle-icon-wrapper" id="q-mark-icon-wrapper">
+                <svg id="q-mark-icon" class="puzzle-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="3"/>
+                    <text x="50" y="65" font-size="60" font-weight="bold" text-anchor="middle" fill="currentColor">?</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- 吉伊图标的模态框 -->
+    <div id="jiyi-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h2>吉伊的谜题</h2>
+            <p class="puzzle-question">我叫吉伊，告诉我，我的生日是？</p>
+            <input type="text" class="answer-input jiyi-answer-input" placeholder="输入你的答案...">
+            <button class="submit-btn jiyi-submit-btn">确认</button>
+        </div>
+    </div>
+
+    <!-- 可颂图标的模态框 -->
+    <div id="kesong-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h2>可颂的谜题</h2>
+            <p class="puzzle-question">可颂是一个帅哥，可颂的生日是？</p>
+            <input type="text" class="answer-input kesong-answer-input" placeholder="输入你的答案...">
+            <button class="submit-btn kesong-submit-btn">确认</button>
+        </div>
+    </div>
+
+    <!-- 问号图标的模态框 -->
+    <div id="q-mark-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h2>神秘问号的谜题</h2>
+            <p class="puzzle-question">『他』的生日是？</p>
+            <input type="text" class="answer-input q-mark-answer-input" placeholder="输入你的答案...">
+            <button class="submit-btn q-mark-submit-btn">确认</button>
+        </div>
+    </div>
+
+    <!-- 庆祝屏幕 -->
+    <div id="celebration-screen" class="hidden">
+        <div class="fireworks-container"></div>
+        <h1 class="final-message">李艺菲生日快乐！qaq</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
