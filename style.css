@@ -52,7 +52,7 @@ body::before {
     z-index: -1;
 
     /* 背景图片设置 */
-    background-image: url('beijing.png');
+    background-image: url('beijing.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
